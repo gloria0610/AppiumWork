@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 import static java.lang.Thread.sleep;
 
-public class apptest2 {
+public class apptestGbankerIOS {
         public static void main(String[] args) throws MalformedURLException, InterruptedException {
             WebDriver wd;
             DesiredCapabilities capabilities = new DesiredCapabilities();
