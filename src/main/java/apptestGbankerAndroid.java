@@ -5,37 +5,31 @@
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.junit.Assert;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.DeviceRotation;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
 import static java.lang.Thread.sleep;
 
-public class apptestGbankerIOS {
+public class apptestGbankerAndroid {
         public static void main(String[] args) throws MalformedURLException, InterruptedException {
             WebDriver wd;
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("appium-version", "1.0");
             capabilities.setCapability("platformName", "iOS");
-//            capabilities.setCapability("platformVersion", "9.3");
-//            capabilities.setCapability("deviceName", "iPhone 6s Plus");
-            capabilities.setCapability("platformVersion", "8.1");
-            capabilities.setCapability("deviceName", "iPhone 6 Plus");
+            capabilities.setCapability("platformVersion", "9.3");
+            capabilities.setCapability("deviceName", "iPhone 6s Plus");
             capabilities.setCapability("appPackage", "com.company.AppName");
             capabilities.setCapability("appActivity", "com.company.AppName.AppMainActivity");
             capabilities.setCapability("autoAcceptAlerts",true);
             capabilities.setCapability("waitForAppScript", "$.delay(6000); $.acceptAlert(); true;");
-            //capabilities.setCapability("app", "/Users/gloria/jobs/apppackages/GoldWallet0207.app");
+            capabilities.setCapability("app", "/Users/gloria/jobs/apppackages/GoldWallet0207.app");
             wd = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities) {
                 public void rotate(DeviceRotation deviceRotation) {
 
@@ -138,13 +132,7 @@ public class apptestGbankerIOS {
 //
             //点买金
             SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,1);
-            //3.9以前
-            //wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAButton[1]")).click();
-
-            //3.9以后
-            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAButton[2]")).click();
-
-
+            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAButton[1]")).click();
             sleep(100);
 
             //输入买金克重
@@ -159,7 +147,7 @@ public class apptestGbankerIOS {
             sleep(80);
             //点击确认支付
             wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[1]")).click();
-            sleep(100);
+            sleep(80);
 
             //输入交易密码
             wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIASecureTextField[1]")).sendKeys("000000");
@@ -209,5 +197,10 @@ public class apptestGbankerIOS {
 
             
         }
+
+
+
+
+
 
 }
