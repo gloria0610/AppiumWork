@@ -22,15 +22,6 @@ public class apptestGbankerAndroid {
         public static void main(String[] args) throws MalformedURLException, InterruptedException {
             WebDriver wd;
             DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setCapability("appium-version", "1.5.3");
-//            capabilities.setCapability("platformName", "Android");
-//            capabilities.setCapability("platformVersion", "5.0.2");
-//            capabilities.setCapability("deviceName", "eb97e654");
-//            capabilities.setCapability("appPackage", "com.gbanker.gbankerandroid.dev");
-//            capabilities.setCapability("appActivity", "com.gbanker.gbankerandroid.ui.WelcomeActivity");
-//            capabilities.setCapability("autoAcceptAlerts",true);
-//            capabilities.setCapability("waitForAppScript", "$.delay(6000); $.acceptAlert(); true;");
-//            capabilities.setCapability("app", "/Users/gloria/jobs/apppackages/gbanker-android-3.9.0-20170213164250-devTest.apk");
             capabilities.setCapability("appium-version", "1.0");
             capabilities.setCapability("platformName", "Android");
             capabilities.setCapability("platformVersion", "5.0");
