@@ -60,6 +60,22 @@ public class SwipUtils {
     }
 
     /**
+     * 上滑
+     *
+     * @param driver
+     * @param during
+     * @param num
+     */
+    public static void swipeToUpAndroid(AppiumDriver<WebElement> driver,int during, int num) {
+        int width = driver.manage().window().getSize().width;
+        int height = driver.manage().window().getSize().height;
+        for (int i = 0; i < num; i++) {
+            driver.swipe(width / 2, height * 3 / 4, width / 2, height*1/ 4, during);
+
+        }
+    }
+
+    /**
      * 下拉
      *
      * @param driver

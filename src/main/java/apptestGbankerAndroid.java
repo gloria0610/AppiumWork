@@ -76,17 +76,17 @@ public class apptestGbankerAndroid {
             SwipUtils.swipeToLeftAndroid((AppiumDriver<WebElement>) wd,500,1);//此处点了立即体验
             sleep(500);
             System.out.println("滑屏成功3");
-//            sleep(80);
-//            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[2]")).click();
-//            sleep(100);
+            sleep(800);
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[2]")).click();
+            sleep(800);
 ////
 //
 //            //上下滑屏
-//            SwipUtils.swipeToUp((AppiumDriver<WebElement>) wd,500,1);
-//            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,2);
-//            sleep(100);
-//            System.out.println("滑屏成功5");
-//
+            SwipUtils.swipeToUpAndroid((AppiumDriver<WebElement>) wd,500,1);
+            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,2);
+            sleep(100);
+            System.out.println("滑屏成功5");
+
 //            //点新手金
 //
 //            System.out.println(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAElement[2]")));
