@@ -80,21 +80,6 @@ public class apptestGbankerAndroid {
             sleep(800);
             System.out.println("滑屏成功5");
 
-//            //点新手金
-//
-//            System.out.println(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAElement[2]")));
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAElement[2]")).click();
-//
-//
-//            sleep(1500);
-//            //新手金回退至首页
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAButton[2]")).click();
-//
-//            sleep(60);
-//            SwipUtils.swipeToUp((AppiumDriver<WebElement>) wd,500,1);
-//
-//            sleep(60);
-//            System.out.println("新手金结束");
 //
             //下边栏 点击全部 发现 和我的
             wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.TabWidget[1]/android.widget.FrameLayout[2]")).click();
