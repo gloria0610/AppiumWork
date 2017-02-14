@@ -5,6 +5,7 @@
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.WebDriver;
@@ -83,8 +84,9 @@ public class apptestGbankerAndroid {
 //
 //            //上下滑屏
             SwipUtils.swipeToUpAndroid((AppiumDriver<WebElement>) wd,500,1);
+            sleep(800);
             SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,2);
-            sleep(100);
+            sleep(800);
             System.out.println("滑屏成功5");
 
 //            //点新手金
@@ -102,82 +104,83 @@ public class apptestGbankerAndroid {
 //
 //            sleep(60);
 //            System.out.println("新手金结束");
-////
-//            //下边栏 点击全部 发现 和我的
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATabBar[1]/UIAButton[2]")).click();
-//            sleep(100);
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATabBar[1]/UIAButton[3]")).click();
-//            sleep(100);
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATabBar[1]/UIAButton[4]")).click();
-//            System.out.println("下部按钮遍历成功");
 //
-//            //滑屏到上方
-//            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,2);
-//            sleep(100);
+            //下边栏 点击全部 发现 和我的
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.TabWidget[1]/android.widget.FrameLayout[2]")).click();
+            sleep(1000);
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.TabWidget[1]/android.widget.FrameLayout[3]")).click();
+            sleep(1000);
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.TabWidget[1]/android.widget.FrameLayout[4]")).click();
+            System.out.println("下部按钮遍历成功");
+
+            //滑屏到上方
+            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,2);
+            sleep(1000);
+
+            //点击登录
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]")).click();
+             //输入用户信息
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]")).sendKeys("15001141469");
+            sleep(1000);
+            System.out.println("输入用户信息成功");
+
+            //点下一步
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")).click();
+            sleep(800);
+            System.out.println("下一步成功");
+
+            //输入密码
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]")).sendKeys("123456");
+            sleep(800);
+            System.out.println("输入密码成功");
+
+            //点登录
+           wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")).click();
+            sleep(800);
+
+            //下边栏 点击首页
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.TabWidget[1]/android.widget.FrameLayout[1]")).click();
+            sleep(800);
 //
-//            //点击登录
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAImage[4]")).click();
-//             //输入用户信息
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIATextField[1]")).sendKeys("15001141469");
-//            sleep(100);
-//            System.out.println("输入用户信息成功");
-//
-//            //点下一步
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAButton[2]")).click();
-//            sleep(80);
-//            System.out.println("下一步成功");
-//
-//            //输入密码
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIASecureTextField[1]")).sendKeys("123456");
-//            sleep(80);
-//            System.out.println("输入密码成功");
-//
-//            //点登录
-//           wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[2]")).click();
-//            sleep(80);
-//
-//            //下边栏 点击首页
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATabBar[1]/UIAButton[1]")).click();
-//            sleep(80);
-////
-//            //点买金
-//            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,1);
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAButton[1]")).click();
-//            sleep(100);
-//
-//            //输入买金克重
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIATextField[1]")).sendKeys("0.1");
-//            sleep(80);
-//
-//            //点击完成
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[2]/UIAToolbar[1]/UIAButton[3]")).click();
-//            sleep(80);
-//            //点击确认下单
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[1]")).click();
-//            sleep(80);
-//            //点击确认支付
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[1]")).click();
-//            sleep(80);
-//
-//            //输入交易密码
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIASecureTextField[1]")).sendKeys("000000");
-//            sleep(60);
-//            //点击确认
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAButton[1]")).click();
-//            sleep(200);
-//
-//
-//            //点击完成
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[1]")).click();
-//            sleep(100);
-//
-//
-//            //点击回退
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAButton[2]")).click();
-//            sleep(100);
-//
-//            //点击金价走势
-//            wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIAStaticText[8]")).click();
+            //点买金
+            SwipUtils.swipeToDown((AppiumDriver<WebElement>) wd,500,1);
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.TextView[2]")).click();
+            sleep(1000);
+
+            //输入买金克重
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v4.view.ViewPager[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.EditText[1]")).sendKeys("0.1");
+            sleep(800);
+
+            //点击完成
+            ((AppiumDriver<WebElement>) wd).hideKeyboard();
+
+            sleep(800);
+            //点击确认下单
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.support.v4.view.ViewPager[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).click();
+            sleep(800);
+            //点击确认支付
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.TextView[3]")).click();
+            sleep(800);
+
+            //输入交易密码
+            wd.findElement(By.xpath(" //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]")).sendKeys("000000");
+            sleep(600);
+            //点击确认
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.Button[1]")).click();
+            sleep(2000);
+
+
+            //点击完成
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.view.View[1]/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.TextView[1]")).click();
+            sleep(1000);
+
+
+            //点击回退
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.view.View[1]/android.widget.ImageButton[1]")).click();
+            sleep(1000);
+
+            //点击金价走势
+            wd.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")).click();
 
             sleep(1000);
             System.out.println("结束");
