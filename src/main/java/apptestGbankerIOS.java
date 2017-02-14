@@ -188,6 +188,7 @@ public class apptestGbankerIOS {
 
 
 
+
             wd.quit();
             //wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[2]/UIAButton[3]\n")).click();
 

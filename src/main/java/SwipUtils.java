@@ -24,6 +24,24 @@ public class SwipUtils {
 
     }
 
+    /**
+     * 向左滑动
+     *
+     * @param driver
+     * @param during
+     * @param num
+     */
+    public static void swipeToLeftAndroid(AppiumDriver<WebElement> driver, int during, int num) {
+        int width = driver.manage().window().getSize().width;
+        int height = driver.manage().window().getSize().height;
+        System.out.println(width);
+        System.out.println(height);
+        for (int i = 0; i < num; i++) {
+            driver.swipe(width*6/7, height/2, width*1/7, height/2, during);
+        }
+
+    }
+
 
     /**
      * 上滑

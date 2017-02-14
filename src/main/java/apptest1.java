@@ -14,6 +14,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
+import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -36,7 +37,7 @@ public class apptest1 {
             capabilities.setCapability("app", "/Users/gloria/jobs/appiumtest/sample-code/sample-code/apps/TestApp/build/release-iphonesimulator/TestApp.app");
             wd = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities) {
                 public void rotate(DeviceRotation deviceRotation) {
-
+                    
                 }
 
                 public DeviceRotation rotation() {
